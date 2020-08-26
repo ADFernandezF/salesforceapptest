@@ -1,5 +1,10 @@
 {
   "orgName": "albertofernandez company",
   "edition": "Developer",
+  "settings": {
+    "mobileSettings": {
+      "enableS1EncryptedStoragePref2": false
+    }
+  },
   "features": []
 }
