@@ -1,4 +1,75 @@
 <template>
-	
-	
+	<div class="slds-grid slds-wrap">
+		<div class="slds-col slds-size_1-of-3 slds-align_absolute-center">
+			<lightning-formatted-text 
+				value="Sell Currency" >
+			</lightning-formatted-text>
+		</div>
+		<div class="slds-col slds-size_1-of-3 slds-align_absolute-center">
+			<lightning-formatted-text 
+				value="Rate" >
+			</lightning-formatted-text>
+		</div>
+		<div class="slds-col slds-size_1-of-3 slds-align_absolute-center">
+			<lightning-formatted-text 
+				value="Buy Currency" >
+			</lightning-formatted-text>
+		</div>
+
+		<div class="slds-col slds-size_1-of-3 slds-align_absolute-center">
+			<lightning-combobox
+				name="progress"
+				options={availableCurrencies}
+				onchange={onChangeSellCurrency} >
+			</lightning-combobox>
+		</div>
+		<div class="slds-col slds-size_1-of-3 slds-align_absolute-center">
+			<lightning-formatted-number
+				value={calculatedRate}
+				maximum-fraction-digits="2">
+			</lightning-formatted-number>
+		</div>
+		<div class="slds-col slds-size_1-of-3 slds-align_absolute-center">
+			<lightning-combobox
+				name="progress"
+				options={availableCurrencies}
+				onchange={onChangeBuyCurrency} >
+			</lightning-combobox>
+		</div>
+
+		<div class="slds-col slds-size_1-of-3 slds-align_absolute-center">
+			<lightning-input 
+				type="number" 
+				name="input1"
+				value={amountSellCurrency}
+				label="Sell Amount"
+				onblur={onBlurSellAmount} >
+			</lightning-input>
+		</div>
+		<div class="slds-col slds-size_1-of-3 slds-align_absolute-center">
+		</div>
+		<div class="slds-col slds-size_1-of-3 slds-align_absolute-center">
+			<lightning-input 
+				type="number" 
+				name="input1" 
+				disabled 
+				value={amountBuyCurrency}
+				label="Buy Amount" >
+			</lightning-input>
+		</div>
+		<div class="slds-col slds-size_1-of-3 slds-align_absolute-center">
+			<lightning-button 
+				label="Create" 
+				onclick={handleCreateTrade} >
+			</lightning-button>
+		</div>
+		<div class="slds-col slds-size_1-of-3">
+		</div>
+		<div class="slds-col slds-size_1-of-3 slds-align_absolute-center">
+			<lightning-button 
+				label="Cancel" 
+				onclick={handleCancel} >
+			</lightning-button>
+		</div>
+	</div>
 </template>

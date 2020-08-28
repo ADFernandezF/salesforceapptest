@@ -6,5 +6,6 @@
 	<description>Component for creating a new trade</description>
 	<targets>
 		<target>lightning__RecordPage</target>
+		<target>lightning__AppPage</target>
 	</targets>
 </LightningComponentBundle>
