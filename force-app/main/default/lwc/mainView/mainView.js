@@ -20,3 +20,4 @@ export default class MainView extends LightningElement {
 			this.data = data;
 		}
 	}
+}
