@@ -5,6 +5,6 @@
 		<language>en_US</language>
 		<protected>true</protected>
 		<shortDescription>Message displayed when a new trade is created.</shortDescription>
-		<value>A new trade has been created with the following data:\nSell Currency: {0}\nSell Amount: {1}\nBuy Currency: {2}\nBuy Amount: {3}\nRate: {4}\nBooked Date: {5}\nLink to the trade: {6}</value>
+		<value>A new trade has been created with the following data \nSell Currency: {0}\nSell Amount: {1}\nBuy Currency: {2}\nBuy Amount: {3}\nRate: {4}\nBooked Date: {5}\nLink to the trade: {6}</value>
 	</labels>
 </CustomLabels>
