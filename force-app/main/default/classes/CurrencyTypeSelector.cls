@@ -18,10 +18,10 @@ public class CurrencyTypeSelector implements API
 
 	public List<String> selectAllIsocodes()
 	{
-		List<String> isocodes = new List<String>();
+		List<String> isocodes = new List<String> { 'EUR', 'USD', 'GBP', 'CAD', 'JPY' };
 
-		for (CurrencyType currType : [SELECT IsoCode FROM CurrencyType])
-			isocodes.add(currType.IsoCode);
+		//for (CurrencyType currType : [SELECT IsoCode FROM CurrencyType])
+		//	isocodes.add(currType.IsoCode);
 
 		return isocodes;
 	}
