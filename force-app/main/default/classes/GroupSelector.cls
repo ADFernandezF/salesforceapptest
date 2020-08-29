@@ -18,8 +18,6 @@ public class GroupSelector implements API
 
 	public List<CollaborationGroup> selectQueueByName(String groupName)
 	{
-		//Trade.isAccessible();
-
 		return [SELECT Id FROM CollaborationGroup WHERE Name = :groupName];
 	}
 }

@@ -40,7 +40,6 @@ public class CalloutService implements API
 		{
 			Map<String, Object> errorInfo = (Map<String, Object>) valuesByKey.get(PARAMETER_ERROR);
 			Object info = errorInfo.get(PARAMETER_ERROR_INFO);
-			System.debug(LoggingLevel.ERROR, info);
 			throw new CalloutException(String.valueOf(info));
 		}
 
