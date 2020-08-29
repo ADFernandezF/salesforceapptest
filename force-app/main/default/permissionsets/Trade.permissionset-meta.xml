@@ -16,6 +16,10 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <tabSettings>
+        <tab>Trade_App</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
         <tab>Trade__c</tab>
         <visibility>Visible</visibility>
     </tabSettings>
