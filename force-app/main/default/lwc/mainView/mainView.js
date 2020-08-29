@@ -1,7 +1,8 @@
 import { LightningElement, track, wire } from 'lwc';
+import { NavigationMixin } from 'lightning/navigation';
 import tradeController from '@salesforce/apex/TradeController.getTrades';
 
-export default class MainView extends LightningElement {
+export default class MainView extends NavigationMixin(LightningElement) {
 
 	@track columns = [
 		{ label: 'ID', fieldName: 'Name', hideDefaultActions: 'true' },
@@ -19,5 +20,15 @@ export default class MainView extends LightningElement {
 		if (data) {
 			this.data = data;
 		}
+	}
+
+	handleNewTrade() {
+		this[NavigationMixin.Navigate]({
+			type: 'standard__objectPage',
+			attributes: {
+				objectApiName: 'Trade__c',
+				actionName: 'new'
+			}
+		});
 	}
 }
